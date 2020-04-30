@@ -13,7 +13,7 @@ import util.WebConnector;
         plugin = {"pretty", "json:target/1.json" + ""},
         features = {"src/test/resources/features"},
         glue = {"stepDefinitions"},
-        tags = {"@"},
+        tags = {"@login"},
         monochrome = true
 )
 

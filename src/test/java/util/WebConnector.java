@@ -21,6 +21,7 @@ import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 import static util.TestLogger.getLogger;
 import static util.TestLogger.setLogger;
 
@@ -126,6 +127,7 @@ public class WebConnector {
 
             case "local":
                 WebDriverManager.chromedriver().setup();
+                //WebDriverManager.getInstance(CHROME).setup();
                 driver = new ChromeDriver();
                 break;
 

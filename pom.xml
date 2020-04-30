@@ -82,6 +82,24 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.lazerycode.selenium</groupId>
+                <artifactId>driver-binary-downloader-maven-plugin</artifactId>
+                <version>1.0.18</version>
+                <configuration>
+                    <!-- root directory that downloaded driver binaries will be stored in -->
+                    <rootStandaloneServerDirectory>/Users/amdi/Desktop/WebTestFramework/binaries</rootStandaloneServerDirectory>
+                    <!-- Where you want to store downloaded zip files -->
+                    <downloadedZipFileDirectory>/Users/amdi/Desktop/WebTestFramework/zips</downloadedZipFileDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>selenium</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -187,10 +205,17 @@
             <artifactId>webdriverextensions</artifactId>
             <version>3.11.0</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>net.lightbody.bmp</groupId>
             <artifactId>browsermob-core</artifactId>
             <version>2.1.5</version>
+        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>3.141.59</version>
         </dependency>
+
     </dependencies>
 </project>
